@@ -4,7 +4,7 @@ Atualizado em 23/11/2026. Este documento resume o estado da entrega; não substi
 
 ## Objetivo do proprietário
 
-Construir uma ferramenta de uso pessoal para um gestor de tráfego brasileiro, inspirada nas funcionalidades públicas do HYPD.AI: conectar fontes, organizar contas por cliente e conversar com um analista orientado por dados. A primeira versão contempla Google Ads, Meta Ads e GA4. O cliente piloto escolhido é **Galileu Senior**.
+Construir uma ferramenta de uso pessoal para um gestor de tráfego brasileiro, inspirada nas funcionalidades públicas do HYPD.AI: conectar fontes, organizar contas por cliente e conversar com um analista orientado por dados. A primeira versão contempla Google Ads, Meta Ads e GA4. O cliente piloto escolhido é **Spazio Italiano**.
 
 O usuário prefere uma interface intuitiva e comunicação em português. Não precisa de cobrança, planos ou equipes nesta etapa. Ações em campanhas não foram solicitadas; os conectores implementados são de consulta.
 
@@ -47,14 +47,14 @@ Abra `http://localhost:4317` no mesmo ambiente em que o servidor está acessíve
 
 ## Próximo trabalho solicitado
 
-Configurar as conexões reais e a IA, selecionar as contas corretas do Galileu Senior e validar um relatório e uma resposta usando dados reais. Essa configuração foi adiada pelo usuário e ainda não foi executada.
+Configurar as conexões reais e a IA, selecionar as contas corretas do Spazio Italiano e validar um relatório e uma resposta usando dados reais. Essa configuração foi adiada pelo usuário e ainda não foi executada.
 
 1. Verificar versões, documentação oficial e requisitos das APIs antes de configurar credenciais.
 2. Ajustar os requisitos do conector Google Ads: o código inicial ainda exige `GOOGLE_ADS_DEVELOPER_TOKEN`. A [documentação oficial consultada em 19/11](https://developers.google.com/google-ads/api/docs/api-policy/developer-token) informou que os tokens foram descontinuados em 09/09/2026 e que o acesso é gerenciado no projeto Cloud. Revalidar e corrigir essa exigência antes de orientar a configuração. A troca anterior terminou antes dessa correção.
 3. Criar ou reutilizar credenciais próprias do app e configurar callbacks para o ambiente escolhido. Não extrair tokens gerenciados pelo ChatGPT/Codex para reutilizá-los neste servidor.
 4. Configurar `APP_SECRET`, senha pessoal, modo live e credencial da IA localmente, sem colocar valores no chat, GitHub ou frontend. Criar chaves ou contratar créditos pode exigir participação do usuário.
 5. Autorizar cada plataforma, descobrir as contas e conferir nome/ID/moeda/fuso antes de vinculá-las ao piloto. Os acessos observados nos conectores do Codex em 19/11 são apenas referências históricas, não prova de acesso atual.
-6. Na Meta, existem contas distintas com nomes relacionados a Galileu e Casarão. A consulta de 19/11 mostrou a conta de nome exato Galileu Senior desabilitada e uma conta chamada GALILEU - CAMPANHAS ativa. Confirmar com dados atuais e com o usuário qual conta representa a mídia comercial do piloto. Manter recrutamento separado.
+6. Para Spazio Italiano, confirmar quais contas de Google Ads e Meta e quais propriedades GA4 representam o escopo do piloto. Se houver múltiplas contas, sites ou landing pages, confirmar a correspondência antes de vincular e não agregar ativos distintos apenas pelo nome.
 7. Comparar métricas com cada plataforma no mesmo período. Conferir o evento de resultado, principalmente na Meta: o mapeamento atual usa `lead` para geração de leads; campanhas de mensagens podem exigir outro tratamento.
 8. Enviar uma pergunta ao analista e verificar que usa somente as fontes do cliente e apresenta datas, definições, limitações e evidências.
 

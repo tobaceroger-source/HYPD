@@ -2,7 +2,7 @@ Quero continuar e testar o Traffic Hub deste repositório.
 
 Leia primeiro CONTEXTO.md, AGENTS.md e README.md. Depois examine o código e descreva o que está implementado, o que é demonstrativo e o que falta validar. Não refaça o projeto do zero.
 
-É uma ferramenta pessoal para gerenciar minhas fontes de tráfego e conversar com um analista. A primeira versão tem Google Ads, Meta e GA4. O cliente piloto é Galileu Senior. Ainda não conectamos contas reais ao aplicativo nem validamos uma chamada real à IA.
+É uma ferramenta pessoal para gerenciar minhas fontes de tráfego e conversar com um analista. A primeira versão tem Google Ads, Meta e GA4. O cliente piloto é Spazio Italiano. Ainda não conectamos contas reais ao aplicativo nem validamos uma chamada real à IA.
 
 Se você tiver terminal/ambiente de execução, instale com npm ci, rode npm run check e abra a interface. Se só tiver leitura pelo GitHub, diga essa limitação e analise o código sem afirmar que executou os testes.
 
